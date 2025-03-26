@@ -44,7 +44,7 @@ class ZMove2ZeroCmd(om.MPxCommand):
 
 def initializePlugin(plugin):
     vendor = "Kakoi Keisuke"
-    version = "1.0.0"
+    version = "1.1.0"
     pluginFn = om.MFnPlugin(plugin, vendor, version)
 
     try:

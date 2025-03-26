@@ -1,1 +1,1 @@
-+ Move2Zero 1.0.0 Move2Zero
++ Move2Zero 1.1.0 Move2Zero
