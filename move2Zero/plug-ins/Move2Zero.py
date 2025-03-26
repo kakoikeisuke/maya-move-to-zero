@@ -131,26 +131,27 @@ def move_to_x_zero():
     amount = get_transform_amount(obj, 0)
     for i in range(len(obj)):
         move_amount = amount[i] * -1
-        cmds.move(move_amount, 0, 0, relative=True)
+        cmds.move(move_amount, 0, 0, obj[i], relative=True)
 
 def move_to_y_zero():
     obj = get_target_object()
     amount = get_transform_amount(obj, 1)
     for i in range(len(obj)):
         move_amount = amount[i] * -1
-        cmds.move(0, move_amount, 0, relative=True)
+        cmds.move(0, move_amount, 0, obj[i], relative=True)
 
 def move_to_z_zero():
     obj = get_target_object()
     amount = get_transform_amount(obj, 2)
     for i in range(len(obj)):
         move_amount = amount[i] * -1
-        cmds.move(0, 0, move_amount, relative=True)
+        cmds.move(0, 0, move_amount, obj[i], relative=True)
 
 def get_target_object():
     target_object = cmds.ls(selection=True, transforms=True)
     if len(target_object) == 0:
         cmds.warning('移動させるオブジェクトを指定してください。')
+    print(target_object)
     return target_object
 
 def get_transform_amount(object_list, move_axis):
@@ -163,4 +164,5 @@ def get_transform_amount(object_list, move_axis):
             if min_vtx > now_vtx:
                 min_vtx = now_vtx
         transform_amount.append(min_vtx)
+    print(transform_amount)
     return transform_amount
