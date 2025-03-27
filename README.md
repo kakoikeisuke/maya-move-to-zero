@@ -1,6 +1,7 @@
 # Move2Zero
 オブジェクトの端をX, Y, Z軸に揃えるMayaプラグインモジュールです。  
 ※プラグインモジュール作成の実験用に制作したものです。
+![](/README_resource/Move2Zero_demo.gif)
 ## プラグインのインストール
 「Move2Zero.mod」ファイルと「Move2Zero」フォルダがzipファイルに圧縮されています。
 MAYA_MODULE_PATHに登録された同一ディレクトリ内に「Move2Zero.mod」ファイルと「Move2Zero」フォルダを配置することで, Mayaプラグインモジュールとして認識できるようになります。  
